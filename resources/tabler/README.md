@@ -26,18 +26,21 @@ npm run build
 
 ## Usage
 
-1.  In `vite.config.js` file, update your `plugins.laravel.input` array value with
-2.  In your blade files, update your `@vite` blade directive with
+1. The related path are as follows:
 
 ```js
 [
-    'resources/vendor/laravel-ui/tabler/css/app.css',
-    'resources/vendor/laravel-ui/tabler/js/app.js',
+    'resources/vendor/ui/tabler/sass/app.scss',
+    'resources/vendor/ui/tabler/js/app.js'
     ...
 ]
 ```
 
-3. Add this to `vite.config.js` file
+2. In your blade files, update your `@vite` blade directive array value with the specified paths
+
+3. In `vite.config.js` file, update your `plugins.laravel.input` array value with the specified paths
+
+4. Add this to `vite.config.js` file
 
 ```js
 resolve: {

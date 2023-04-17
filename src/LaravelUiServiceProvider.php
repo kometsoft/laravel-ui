@@ -43,7 +43,7 @@ class LaravelUiServiceProvider extends ServiceProvider
             // $this->commands([]);
 
             $this->publishes([
-                __DIR__.'/../resources' => resource_path('vendor/laravel-ui'),
+                __DIR__.'/../resources' => resource_path('vendor/ui'),
             ], 'ui-resources');
         }
     }
