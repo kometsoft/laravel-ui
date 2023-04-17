@@ -36,3 +36,18 @@ npm run build
     ...
 ]
 ```
+
+3. Add this to `vite.config.js` file
+
+```js
+resolve: {
+    alias: [
+        {
+            find: /^~.+/,
+            replacement: (val) => {
+                return val.replace(/^~/, '')
+            },
+        },
+    ],
+},
+```
