@@ -1,4 +1,4 @@
-# Very short description of the package
+# kometsoft/laravel-ui
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/kometsoft/laravel-ui.svg?style=flat-square)](https://packagist.org/packages/kometsoft/laravel-ui)
 [![Total Downloads](https://img.shields.io/packagist/dt/kometsoft/laravel-ui.svg?style=flat-square)](https://packagist.org/packages/kometsoft/laravel-ui)
@@ -18,12 +18,6 @@ composer require kometsoft/laravel-ui
 
 ```php
 // Usage description here
-```
-
-### Testing
-
-```bash
-composer test
 ```
 
 ### Changelog
@@ -46,7 +40,3 @@ If you discover any security related issues, please email aerrata@bot.com instea
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
