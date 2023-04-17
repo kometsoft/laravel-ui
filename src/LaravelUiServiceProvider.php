@@ -22,7 +22,7 @@ class LaravelUiServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('laravel-ui.php'),
-            ], 'config');
+            ], 'ui-config');
 
             // Publishing the views.
             /*$this->publishes([
@@ -44,7 +44,7 @@ class LaravelUiServiceProvider extends ServiceProvider
 
             $this->publishes([
                 __DIR__.'/../resources' => resource_path('vendor/laravel-ui'),
-            ], 'laravel-ui-resources');
+            ], 'ui-resources');
         }
     }
 
