@@ -16,8 +16,8 @@ composer require kometsoft/laravel-ui
 
 ## Usage
 
-```php
-// Usage description here
+```bash
+php artisan vendor:publish --tag=ui-resources
 ```
 
 ### Changelog

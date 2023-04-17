@@ -20,9 +20,9 @@ class LaravelUiServiceProvider extends ServiceProvider
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('laravel-ui.php'),
-            ], 'ui-config');
+            // $this->publishes([
+            //     __DIR__.'/../config/config.php' => config_path('laravel-ui.php'),
+            // ], 'ui-config');
 
             // Publishing the views.
             /*$this->publishes([
