@@ -3,7 +3,6 @@
 namespace Kometsoft\LaravelUi;
 
 use Illuminate\Support\ServiceProvider;
-use Kometsoft\LaravelUi\Console\Commands\Install;
 
 class LaravelUiServiceProvider extends ServiceProvider
 {
@@ -40,14 +39,12 @@ class LaravelUiServiceProvider extends ServiceProvider
                 __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel-ui'),
             ], 'lang');*/
 
+            // Registering package commands.
+            // $this->commands([]);
+
             $this->publishes([
                 __DIR__.'/../resources' => public_path('vendor/laravel-ui'),
-            ], 'assets');
-
-            // Registering package commands.
-            $this->commands([
-                Install::class,
-            ]);
+            ], 'laravel-ui-resources');
         }
     }
 
