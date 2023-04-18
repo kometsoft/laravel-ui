@@ -19,7 +19,13 @@ Premium and Open Source dashboard template with responsive and high quality UI.
 You can install the package via npm:
 
 ```bash
-npm i @tabler/core@1.0.0-beta17 bootstrap@5.3.0-alpha1 @tabler/icons-webfont autosize imask litepicker tom-select
+npm i @tabler/core@1.0.0-beta17 \
+bootstrap@5.3.0-alpha1 \
+@tabler/icons-webfont \
+autosize \
+imask \
+litepicker \
+tom-select
 
 npm run build
 ```
@@ -36,11 +42,11 @@ npm run build
 ]
 ```
 
-2. In your blade files, update your `@vite` blade directive array value with the specified paths
+2. In your blade files, update your `@vite` blade directive array value with the related paths
 
-3. In `vite.config.js` file, update your `plugins.laravel.input` array value with the specified paths
+3. In `vite.config.js` file, update your `plugins.laravel.input` array value with the related paths
 
-4. Add this to `vite.config.js` file
+4. Also add this to `vite.config.js` file
 
 ```js
 resolve: {
