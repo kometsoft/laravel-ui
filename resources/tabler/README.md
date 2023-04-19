@@ -32,7 +32,7 @@ npm run build
 
 ## Usage
 
-1. The related path are as follows:
+1. The related path are as follows, update both of your `plugins.laravel.input` value in `vite.config.js` file, and `@vite` blade directive value in all your blade files
 
 ```js
 [
@@ -42,11 +42,7 @@ npm run build
 ]
 ```
 
-2. In your blade files, update your `@vite` blade directive array value with the related paths
-
-3. In `vite.config.js` file, update your `plugins.laravel.input` array value with the related paths
-
-4. Also add this to `vite.config.js` file
+2. Also add this to `vite.config.js` file
 
 ```js
 resolve: {
