@@ -42,7 +42,7 @@ npm run build
 ]
 ```
 
-2. Also add this to `vite.config.js` file
+2. Also add this to your `vite.config.js` file
 
 ```js
 resolve: {
