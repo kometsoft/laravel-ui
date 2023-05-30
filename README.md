@@ -1,4 +1,4 @@
-# kometsoft/laravel-ui
+# Laravel UI
 
 <!-- [![Latest Version on Packagist](https://img.shields.io/packagist/v/kometsoft/laravel-ui.svg?style=flat-square)](https://packagist.org/packages/kometsoft/laravel-ui)
 [![Total Downloads](https://img.shields.io/packagist/dt/kometsoft/laravel-ui.svg?style=flat-square)](https://packagist.org/packages/kometsoft/laravel-ui)
