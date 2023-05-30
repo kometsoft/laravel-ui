@@ -50,7 +50,7 @@ export default defineConfig({
 
 2. Add this to your `vite.config.js` file.
 
-> Alias resolution by removing the "~" prefix, simplifying module imports in development.
+> Alias resolution by removing the "~" prefix, simplifying module imports.
 
 ```js
 export default defineConfig({
