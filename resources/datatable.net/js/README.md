@@ -1,4 +1,4 @@
-# Tabler
+# Datatable.net
 
 DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, built upon the foundations of progressive enhancement, that adds all of these advanced features to any HTML table.
 
@@ -14,13 +14,18 @@ npm run build
 
 ## Usage
 
-1. Update your `plugins.laravel.input` value in `vite.config.js` file with this path
+
+1. Update the input value in `vite.config.js` file.
 
 ```js
-[
-    'resources/vendor/ui/datatable.net/js/app.js'
-    ...
-]
+export default defineConfig({
+  plugins: [
+    laravel({
+      input: [
+        ...
+        'resources/vendor/ui/datatable.net/js/app.js'
+      ],
+      ...
 ```
 
 2. Install Yajra's Datatables package
@@ -33,7 +38,7 @@ npm i laravel-datatables-vite
 npm run build
 ```
 
-3. In blade usage
+3. In Laravel Blade, modify the following
 
 ```php
 @section('content')

@@ -1,4 +1,4 @@
-# Tabler
+# Tabler CSS
 
 Premium and Open Source dashboard template with responsive and high quality UI.
 
@@ -32,27 +32,49 @@ npm run build
 
 ## Usage
 
-1. The related path are as follows, update both of your `plugins.laravel.input` value in `vite.config.js` file, and `@vite` blade directive value in all your blade files
+### Vite
+
+1. Update the input value in `vite.config.js` file.
 
 ```js
-[
-    'resources/vendor/ui/tabler/sass/app.scss',
-    'resources/vendor/ui/tabler/js/app.js'
-    ...
-]
+export default defineConfig({
+  plugins: [
+    laravel({
+      input: [
+        ...
+        'resources/vendor/ui/tabler/sass/app.scss',
+        'resources/vendor/ui/tabler/js/app.js'
+      ],
+      ...
 ```
 
-2. Also add this to your `vite.config.js` file
+2. Add this to your `vite.config.js` file.
+
+> Alias resolution by removing the "~" prefix, simplifying module imports in development.
 
 ```js
-resolve: {
+export default defineConfig({
+  ...
+  resolve: {
     alias: [
-        {
-            find: /^~.+/,
-            replacement: (val) => {
-                return val.replace(/^~/, '')
-            },
+      {
+        find: /^~.+/,
+        replacement: (val) => {
+          return val.replace(/^~/, '')
         },
+      },
     ],
-},
+  },
+```
+
+### Laravel Blade
+
+1. In your blade files, update your `@vite` blade directive array.
+
+```php
+@vite([
+    ...
+    'resources/vendor/ui/tabler/sass/app.scss',
+    'resources/vendor/ui/tabler/js/app.js'
+])
 ```
