@@ -41,9 +41,9 @@ npm run build
 
 ### Laravel Blade
 
-1. In Laravel Blade, modify the following
+1. Usage, like following.
 
-```php
+```html
 @section('content')
     <div class="container">
         <div class="card">
