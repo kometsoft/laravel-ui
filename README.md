@@ -4,7 +4,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/kometsoft/laravel-ui.svg?style=flat-square)](https://packagist.org/packages/kometsoft/laravel-ui)
 ![GitHub Actions](https://github.com/kometsoft/laravel-ui/actions/workflows/main.yml/badge.svg) -->
 
-A package for integration of Tabler CSS theme, with ready-to-use components and customization options.
+A package for integration of Tabler UI kits, with ready-to-use components and customization options.
 
 ## Installation
 
