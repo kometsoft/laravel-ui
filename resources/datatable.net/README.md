@@ -14,6 +14,7 @@ npm run build
 
 ## Usage
 
+### Vite
 
 1. Update the input value in `vite.config.js` file.
 
@@ -38,7 +39,9 @@ npm i laravel-datatables-vite
 npm run build
 ```
 
-3. In Laravel Blade, modify the following
+### Laravel Blade
+
+1. In Laravel Blade, modify the following
 
 ```php
 @section('content')
