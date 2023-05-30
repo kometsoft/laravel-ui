@@ -34,7 +34,7 @@ composer require kometsoft/laravel-ui
 php artisan vendor:publish --tag=ui-resources
 ```
 
-2. Refer each asset README.md on how to set it up
+2. Refer each asset README.md in `/resources/vendor/ui` on how to set it up
 
 ## Credits
 
