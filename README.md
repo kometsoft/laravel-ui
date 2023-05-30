@@ -8,13 +8,13 @@ A package for integration of Tabler CSS theme, with ready-to-use components and 
 
 ## Installation
 
-Install laravel/ui package:
+Install `laravel/ui` package:
 
 ```bash
 composer require laravel/ui
 ```
 
-Once the laravel/ui package has been installed, you may install the frontend scaffolding using the ui Artisan command:
+Once the `laravel/ui` package has been installed, you may install the frontend scaffolding using the ui Artisan command:
 
 ```
 php artisan ui bootstrap --auth
