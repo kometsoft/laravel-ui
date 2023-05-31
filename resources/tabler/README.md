@@ -19,6 +19,8 @@ Premium and Open Source dashboard template with responsive and high quality UI.
 You can install the package via npm:
 
 ```bash
+npm install
+
 npm i @tabler/core@1.0.0-beta17 \
 bootstrap@5.3.0-alpha1 \
 @tabler/icons-webfont \
@@ -65,6 +67,7 @@ export default defineConfig({
       },
     ],
   },
+},
 ```
 
 ### Laravel Blade
@@ -77,4 +80,10 @@ export default defineConfig({
     'resources/vendor/ui/tabler/sass/app.scss',
     'resources/vendor/ui/tabler/js/app.js'
 ])
+```
+
+2. Recompile your assets
+
+```bash
+npm run build
 ```
