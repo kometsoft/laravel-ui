@@ -19,15 +19,11 @@ Premium and Open Source dashboard template with responsive and high quality UI.
 You can install the package via npm:
 
 ```bash
-npm install
-
-npm i @tabler/core@1.0.0-beta17 \
-bootstrap@5.3.0-alpha1 \
+npm i @tabler/core@1.0.0-beta19 \
 @tabler/icons-webfont \
+bootstrap@5.3.0-alpha3 \
 autosize \
-imask \
-litepicker \
-tom-select
+imask 
 
 npm run build
 ```
