@@ -4,15 +4,11 @@ Premium and Open Source dashboard template with responsive and high quality UI.
 
 ## Version
 
-`1.0.0-beta17`
+`1.0.0-beta19`
 
 ## Dependencies
 
 - bootstrap `5.3.0-alpha1`
-- autosize `6.0.1`
-- imask `6.6.0-alpha.0`
-- litepicker `2.0.12`
-- tom-select `2.2.2`
 
 ## Installation
 
@@ -21,9 +17,7 @@ You can install the package via npm:
 ```bash
 npm i @tabler/core@1.0.0-beta19 \
 @tabler/icons-webfont \
-bootstrap@5.3.0-alpha3 \
-autosize \
-imask 
+bootstrap@5.3.0-alpha1
 
 npm run build
 ```
@@ -39,31 +33,11 @@ export default defineConfig({
   plugins: [
     laravel({
       input: [
-        ...
-        'resources/vendor/ui/tabler/sass/app.scss',
+        'resources/vendor/ui/tabler/css/app.css',
         'resources/vendor/ui/tabler/js/app.js'
+        ...
       ],
       ...
-```
-
-2. Add this to your `vite.config.js` file.
-
-> Alias resolution by removing the "~" prefix, simplifying module imports.
-
-```js
-export default defineConfig({
-  ...
-  resolve: {
-    alias: [
-      {
-        find: /^~.+/,
-        replacement: (val) => {
-          return val.replace(/^~/, '')
-        },
-      },
-    ],
-  },
-},
 ```
 
 ### Laravel Blade
@@ -72,9 +46,9 @@ export default defineConfig({
 
 ```php
 @vite([
+    'resources/vendor/ui/tabler/css/app.css',
+    'resources/vendor/ui/tabler/js/app.js',
     ...
-    'resources/vendor/ui/tabler/sass/app.scss',
-    'resources/vendor/ui/tabler/js/app.js'
 ])
 ```
 
