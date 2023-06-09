@@ -1,7 +1,7 @@
 @import '@tabler/core/dist/css/tabler';
 /* @import '@tabler/core/dist/css/tabler-flags';
-@import '@tabler/core/dist/css/tabler-payments';
-@import '@tabler/core/dist/css/tabler-vendors'; */
+@import '@tabler/core/dist/css/tabler-payments'; */
+@import '@tabler/core/dist/css/tabler-vendors';
 @import '@tabler/core/dist/css/demo';
 
 @import '@tabler/icons-webfont/tabler-icons.min.css';
