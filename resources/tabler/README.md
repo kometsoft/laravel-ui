@@ -1,4 +1,4 @@
-# Tabler CSS
+<!-- # Tabler CSS
 
 Premium and Open Source dashboard template with responsive and high quality UI.
 
@@ -56,4 +56,4 @@ export default defineConfig({
 
 ```bash
 npm run build
-```
+``` -->

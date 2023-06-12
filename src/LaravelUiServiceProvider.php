@@ -42,9 +42,13 @@ class LaravelUiServiceProvider extends ServiceProvider
             // Registering package commands.
             // $this->commands([]);
 
+            // $this->publishes([
+            //     __DIR__.'/../resources' => resource_path('vendor/ui'),
+            // ], 'ui-resources');
+
             $this->publishes([
-                __DIR__.'/../resources' => resource_path('vendor/ui'),
-            ], 'ui-resources');
+                __DIR__.'/../resources/tabler' => public_path('vendor/ui/tabler'),
+            ], 'ui-tabler');
         }
     }
 
