@@ -47,8 +47,12 @@ class LaravelUiServiceProvider extends ServiceProvider
             // ], 'ui-resources');
 
             $this->publishes([
-                __DIR__.'/../resources/tabler/core/dist' => public_path('vendor/ui/tabler'),
-            ], 'ui-tabler');
+                __DIR__.'/../resources/tabler/core/dist' => public_path('vendor/ui/tabler/core'),
+            ], 'ui-tabler-core');
+
+            $this->publishes([
+                __DIR__.'/../resources/tabler/icons-webfont' => public_path('vendor/ui/tabler/icons-webfont'),
+            ], 'ui-tabler-icons-webfont');
         }
     }
 
