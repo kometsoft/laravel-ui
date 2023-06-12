@@ -2,6 +2,7 @@
 
 namespace Kometsoft\LaravelUi;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelUiServiceProvider extends ServiceProvider
@@ -54,6 +55,10 @@ class LaravelUiServiceProvider extends ServiceProvider
                 __DIR__.'/../resources/tabler/icons-webfont' => public_path('vendor/ui/tabler/icons-webfont'),
             ], 'ui-tabler-icons-webfont');
         }
+
+        Blade::directive('ui', function ($expression) {
+            return "<?php echo app('LaravelUi')->tabler{$expression}; ?>";
+        });
     }
 
     /**
