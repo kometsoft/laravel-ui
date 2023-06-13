@@ -48,18 +48,14 @@ class LaravelUiServiceProvider extends ServiceProvider
             // ], 'ui-resources');
 
             $this->publishes([
-                __DIR__.'/../resources/tabler/core' => public_path('vendor/ui/tabler/core'),
-            ], 'ui-tabler-core');
-
-            $this->publishes([
-                __DIR__.'/../resources/tabler/icons-webfont' => public_path('vendor/ui/tabler/icons-webfont'),
-            ], 'ui-tabler-icons-webfont');
+                __DIR__.'/../resources/tabler' => public_path('vendor/ui/tabler'),
+            ], 'ui-tabler');
         }
 
         /*
          * Register Blade directive for module imports generation
          */
-        Blade::directive('tabler', function ($features) {
+        Blade::directive('ui', function ($features) {
             return "<?php echo app('laravel-ui')->generateImports($features); ?>";
         });
     }

@@ -34,12 +34,16 @@ composer require kometsoft/laravel-ui
 php artisan vendor:publish --tag=ui-resources
 ```
 
-2. Refer each asset README.md in `/resources/vendor/ui` on how to set it up
+2. Add the `@ui` Blade directive
+
+```
+@tabler(['core', 'icons-webfont', 'apexcharts', 'tom-select', 'litepicker'])
+```
 
 ## Credits
 
--   [aerrata](https://github.com/kometsoft)
--   [All Contributors](../../contributors)
+- [aerrata](https://github.com/kometsoft)
+- [All Contributors](../../contributors)
 
 ## License
 
