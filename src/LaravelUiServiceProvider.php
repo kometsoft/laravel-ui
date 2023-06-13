@@ -56,8 +56,11 @@ class LaravelUiServiceProvider extends ServiceProvider
             ], 'ui-tabler-icons-webfont');
         }
 
-        Blade::directive('tabler', function ($expression) {
-            return "<?php echo app('LaravelUi')->generateTablerScripts($expression); ?>";
+        /*
+         * Register Blade directive for module imports generation
+         */
+        Blade::directive('tabler', function ($features) {
+            return "<?php echo app('laravel-ui')->generateImports($features); ?>";
         });
     }
 
