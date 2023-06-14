@@ -45,7 +45,7 @@ class LaravelUi
             $script('tabler-core/libs/litepicker/litepicker.js');
         }
 
-        if (in_array('chart.js', $features)) {
+        if (in_array('chartjs', $features)) {
             $script('chart.js/chart.min.js');
         }
 

@@ -56,8 +56,8 @@ class LaravelUiServiceProvider extends ServiceProvider
             ], 'ui-tabler-icons');
 
             $this->publishes([
-                __DIR__.'/../resources/chart.js' => public_path('vendor/ui/chart.js'),
-            ], 'ui-chart.js');
+                __DIR__.'/../resources/chartjs' => public_path('vendor/ui/chartjs'),
+            ], 'ui-chartjs');
         }
 
         /*

@@ -37,7 +37,7 @@ php artisan vendor:publish --tag=ui-resources
 2. Add the `@ui` Blade directive
 
 ```
-@ui(['tabler-core', 'tabler-icons', 'apexcharts', 'tom-select', 'litepicker', 'chart.js'])
+@ui(['tabler-core', 'tabler-icons', 'apexcharts', 'tom-select', 'litepicker', 'chartjs'])
 ```
 
 ## Credits
