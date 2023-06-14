@@ -46,7 +46,7 @@ class LaravelUi
         }
 
         if (in_array('chartjs', $features)) {
-            $script('chart.js/chart.min.js');
+            $script('chartjs/chart.min.js');
         }
 
         return $imports;
