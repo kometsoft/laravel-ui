@@ -31,7 +31,9 @@ composer require kometsoft/laravel-ui
 1. Publish assets
 
 ```bash
-php artisan vendor:publish --tag=ui-resources
+php artisan vendor:publish --tag=ui-tabler-core
+php artisan vendor:publish --tag=ui-tabler-icons
+php artisan vendor:publish --tag=ui-chartjs
 ```
 
 2. Add the `@ui` Blade directive
