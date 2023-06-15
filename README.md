@@ -36,7 +36,9 @@ php artisan vendor:publish --tag=ui-tabler-icons
 php artisan vendor:publish --tag=ui-chartjs
 ```
 
-2. Add the `@ui` Blade directive
+2. Add the `@ui` Blade directive to your main layout
+
+> Consider removing your existing Bootstrap imports
 
 ```
 @ui(['tabler-core', 'tabler-icons', 'apexcharts', 'tom-select', 'litepicker', 'chartjs'])
