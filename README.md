@@ -31,9 +31,7 @@ composer require kometsoft/laravel-ui
 1. Publish assets
 
 ```bash
-php artisan vendor:publish --tag=ui-tabler-core
-php artisan vendor:publish --tag=ui-tabler-icons
-php artisan vendor:publish --tag=ui-chartjs
+php artisan vendor:publish --tag=ui-assets
 ```
 
 2. Add the `@ui` Blade directive to your main layout
@@ -41,7 +39,7 @@ php artisan vendor:publish --tag=ui-chartjs
 > Consider removing your existing Bootstrap imports
 
 ```
-@ui(['tabler-core', 'tabler-icons', 'apexcharts', 'tom-select', 'litepicker', 'chartjs'])
+@ui(['tabler-core', 'tabler-icons', 'apexcharts', 'tom-select', 'litepicker', 'chart.js', 'datatable.net'])
 ```
 
 ## Credits
