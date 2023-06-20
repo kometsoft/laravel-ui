@@ -49,6 +49,12 @@ class LaravelUi
             $script('chart.js/chart.min.js');
         }
 
+        if (in_array('datatables.net', $features)) {
+            $link('datatables.net/css/datatables.min.css');
+            $script('datatables.net/js/datatables.min.js');
+            $script('datatables.net/js/app.js');
+        }
+
         return $imports;
     }
 
