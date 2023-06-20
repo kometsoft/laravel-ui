@@ -39,7 +39,7 @@ php artisan vendor:publish --tag=ui-assets
 > Consider removing your existing Bootstrap imports
 
 ```
-@ui(['tabler-core', 'tabler-icons', 'apexcharts', 'tom-select', 'litepicker', 'chart.js', 'datatable.net'])
+@ui(['tabler-core', 'tabler-icons', 'apexcharts', 'tom-select', 'litepicker', 'chart.js', 'datatables.net'])
 ```
 
 ## Credits
