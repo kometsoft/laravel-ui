@@ -1,6 +1,3 @@
-require('./dataTables.buttons.js')
-require('./dataTables.renderers.js')
-
 $.extend(true, DataTable.defaults, {
   dom: `<"card-body border-bottom py-3"
     <"row d-flex align-items-center"
