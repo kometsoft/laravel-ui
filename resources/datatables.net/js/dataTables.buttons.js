@@ -29,18 +29,16 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
   })
-})
 
-// Buttons
-/**
- * DataTables add button.
- *
- * -- Laravel Integration --
- *
- * Button::make('add')->text('<i class="bi bi-plus"></i> Add')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  // Buttons
+  /**
+   * DataTables add button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('add')->text('<i class="bi bi-plus"></i> Add')
+   *
+   */
   $.fn.dataTable.ext.buttons.add = {
     name: 'add',
     className: 'buttons-add btn-success',
@@ -53,17 +51,15 @@ document.addEventListener('DOMContentLoaded', function () {
       window.location = uri + '/create'
     },
   }
-})
 
-/**
- * DataTables export button.
- *
- * -- Laravel Integration --
- *
- * Button::make('export')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables export button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('export')
+   *
+   */
   $.fn.dataTable.ext.buttons.export = {
     name: 'export',
     extend: 'collection',
@@ -75,102 +71,92 @@ document.addEventListener('DOMContentLoaded', function () {
       { extend: 'pdf', text: 'PDF' },
     ],
   }
-})
 
-/**
- * DataTables csv button.
- *
- * -- Laravel Integration --
- *
- * Button::make('csv')->text('<i class="bi bi-file-csv"></i> Export to CSV')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables csv button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('csv')->text('<i class="bi bi-file-csv"></i> Export to CSV')
+   *
+   */
   $.fn.dataTable.ext.buttons.csv = {
     name: 'csv',
     className: 'buttons-csv btn-primary',
     titleAttr: 'Export as CSV',
-    text: '<i class="bi bi-filetype-csv"></i>',
+    text: '<small><b>CSV</b></small>',
     action: function (e, dt, button, config) {
       window.location = _buildUrl(dt, 'csv')
     },
   }
-})
 
-/**
- * DataTables excel button.
- *
- * -- Laravel Integration --
- *
- * Button::make('excel')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables excel button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('excel')
+   *
+   */
   $.fn.dataTable.ext.buttons.excel = {
     name: 'excel',
     className: 'buttons-excel btn-primary',
     titleAttr: 'Export as Excel',
-    text: '<i class="bi bi-file-earmark-excel"></i>',
+    text: '<small><b>EXCEL</b></small>',
     action: function (e, dt, button, config) {
       window.location = _buildUrl(dt, 'excel')
     },
   }
-})
 
-/**
- * DataTables pdf button.
- *
- * -- Laravel Integration --
- *
- * Button::make('pdf')->text('Export to PDF')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables pdf button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('pdf')->text('Export to PDF')
+   *
+   */
   $.fn.dataTable.ext.buttons.pdf = {
     name: 'pdf',
     className: 'buttons-pdf btn-primary',
     titleAttr: 'Export as PDF',
-    text: '<i class="bi bi-file-pdf"></i>',
+    text: '<small><b>PDF</b></small>',
     action: function (e, dt, button, config) {
       window.location = _buildUrl(dt, 'pdf')
     },
   }
-})
 
-/**
- * DataTables print button.
- *
- * -- Laravel Integration --
- *
- * Button::make('print')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables print button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('print')
+   *
+   */
   $.fn.dataTable.ext.buttons.print = {
     name: 'print',
     className: 'buttons-print btn-primary',
     titleAttr: 'Print',
-    text: '<i class="bi bi-printer"></i>',
+    text: '<small><b>PRINT</b></small>',
     action: function (e, dt, button, config) {
       window.location = _buildUrl(dt, 'print')
     },
   }
-})
 
-/**
- * DataTables reset button.
- *
- * -- Laravel Integration --
- *
- * Button::make('reset')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables reset button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('reset')
+   *
+   */
   $.fn.dataTable.ext.buttons.reset = {
     name: 'reset',
     className: 'btn-primary',
     titleAttr: 'Reset',
-    text: '<i class="bi bi-arrow-counterclockwise"></i>',
+    text: '<small><b>RESET</b></small>',
     action: function (e, dt, button, config) {
       $('.dataTable')
         .find(':input')
@@ -186,22 +172,20 @@ document.addEventListener('DOMContentLoaded', function () {
       dt.search('').draw()
     },
   }
-})
 
-/**
- * DataTables reload button.
- *
- * -- Laravel Integration --
- *
- * Button::make('reload')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables reload button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('reload')
+   *
+   */
   $.fn.dataTable.ext.buttons.reload = {
     name: 'reload',
     className: 'btn-primary',
     titleAttr: 'Reload',
-    text: '<i class="bi bi-arrow-repeat"></i>',
+    text: '<small><b>RELOAD</b></small>',
     action: function (e, dt, button, config) {
       dt.draw(false)
     },
@@ -213,24 +197,22 @@ document.addEventListener('DOMContentLoaded', function () {
         if (processing) {
           button.html('<i class="spinner-border spinner-border-sm" role="status">\n' + '  <span class="visually-hidden">Loading...</span>\n' + '</i>')
         } else {
-          button.html('<i class="bi bi-arrow-repeat"></i>')
+          button.html('<small><b>RELOAD</b></small>')
         }
 
         button.attr('disabled', processing)
       })
     },
   }
-})
 
-/**
- * DataTables restore button.
- *
- * -- Laravel Integration --
- *
- * Button::make('restore')->text('Restore Selected Records')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables restore button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('restore')->text('Restore Selected Records')
+   *
+   */
   $.fn.dataTable.ext.buttons.restore = {
     name: 'restore',
     extend: 'selected',
@@ -266,17 +248,15 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     },
   }
-})
 
-/**
- * DataTables duplicate button.
- *
- * -- Laravel Integration --
- *
- * Button::make('duplicate')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables duplicate button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('duplicate')
+   *
+   */
   $.fn.dataTable.ext.buttons.duplicate = {
     name: 'duplicate',
     extend: 'selected',
@@ -308,17 +288,15 @@ document.addEventListener('DOMContentLoaded', function () {
         .mode('create')
     },
   }
-})
 
-/**
- * DataTables duplicateSingle button.
- *
- * -- Laravel Integration --
- *
- * Button::make('duplicateSingle')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables duplicateSingle button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('duplicateSingle')
+   *
+   */
   $.fn.dataTable.ext.buttons.duplicateSingle = {
     name: 'duplicateSingle',
     extend: 'selectedSingle',
@@ -350,17 +328,15 @@ document.addEventListener('DOMContentLoaded', function () {
         .mode('create')
     },
   }
-})
 
-/**
- * DataTables forceDelete button.
- *
- * -- Laravel Integration --
- *
- * Button::make('forceDelete')->text('Permanently Delete Selected Records')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables forceDelete button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('forceDelete')->text('Permanently Delete Selected Records')
+   *
+   */
   $.fn.dataTable.ext.buttons.forceDelete = {
     name: 'forceDelete',
     extend: 'selected',
@@ -396,17 +372,15 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     },
   }
-})
 
-/**
- * DataTables forceDeleteSingle button.
- *
- * -- Laravel Integration --
- *
- * Button::make('forceDeleteSingle')->text('Permanently Delete Selected Record')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables forceDeleteSingle button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('forceDeleteSingle')->text('Permanently Delete Selected Record')
+   *
+   */
   $.fn.dataTable.ext.buttons.forceDeleteSingle = {
     name: 'forceDeleteSingle',
     extend: 'selectedSingle',
@@ -442,25 +416,23 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     },
   }
-})
 
-/**
- * DataTables URL button.
- *
- * -- Laravel Integration --
- *
- * // Add DTE_URL column to response.
- * datatables($query)
- *     ->addColumn('DTE_URL', '{{ $url }}')
- *     ->addColumn('edit_url', '{{ $url }}')
- *     ...
- *
- * // Add URL button to open the row link.
- * Button::make('url')->text('Edit'),
- * Button::make('url')->data('edit_url')->text('Edit')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables URL button.
+   *
+   * -- Laravel Integration --
+   *
+   * // Add DTE_URL column to response.
+   * datatables($query)
+   *     ->addColumn('DTE_URL', '{{ $url }}')
+   *     ->addColumn('edit_url', '{{ $url }}')
+   *     ...
+   *
+   * // Add URL button to open the row link.
+   * Button::make('url')->text('Edit'),
+   * Button::make('url')->data('edit_url')->text('Edit')
+   *
+   */
   $.fn.dataTable.ext.buttons.url = {
     name: 'url',
     extend: 'selectedSingle',
@@ -478,35 +450,33 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     },
   }
-})
 
-/**
- * DataTables Ajax button.
- *
- * -- Laravel Integration --
- *
- * // Add DTE_AJAX column to response.
- * datatables($query)
- *     ->addColumn('DTE_AJAX', '{{ $url }}')
- *     ->addColumn('restore_url', '{{ $url }}')
- *     ...
- *
- * Button::make('ajax')
- *     ->text('Restore')
- *     ->confirmation('Generic confirmation message.') // Optional if you want confirmation before proceeding.
- *     ->onCancel('function(response) { alert('confirmation cancelled') }')
- *     ->onSuccess('function(response) { alert('success') }')
- *     ->onError('function(err) { alert('error') }')
- *     ->method('POST') // default ajax method is POST.
- *
- * Button::make('ajax')
- *     ->text('Restore')
- *     ->data('restore_url')
- *     ->onSuccess('function(response) { alert('success') }')
- *     ->onError('function(err) { alert('error') }')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables Ajax button.
+   *
+   * -- Laravel Integration --
+   *
+   * // Add DTE_AJAX column to response.
+   * datatables($query)
+   *     ->addColumn('DTE_AJAX', '{{ $url }}')
+   *     ->addColumn('restore_url', '{{ $url }}')
+   *     ...
+   *
+   * Button::make('ajax')
+   *     ->text('Restore')
+   *     ->confirmation('Generic confirmation message.') // Optional if you want confirmation before proceeding.
+   *     ->onCancel('function(response) { alert('confirmation cancelled') }')
+   *     ->onSuccess('function(response) { alert('success') }')
+   *     ->onError('function(err) { alert('error') }')
+   *     ->method('POST') // default ajax method is POST.
+   *
+   * Button::make('ajax')
+   *     ->text('Restore')
+   *     ->data('restore_url')
+   *     ->onSuccess('function(response) { alert('success') }')
+   *     ->onError('function(err) { alert('error') }')
+   *
+   */
   $.fn.dataTable.ext.buttons.ajax = {
     name: 'ajax',
     extend: 'selectedSingle',
@@ -540,23 +510,21 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     },
   }
-})
 
-/**
- * DataTables Batch Ajax action button.
- *
- * -- Laravel Integration --
- *
- * Button::make('ajaxBatch')
- *     ->text('Restore')
- *     ->url(route('batch-restore-action-url'))
- *     ->confirmation('Generic confirmation message.') // Optional if you want confirmation before proceeding.
- *     ->onCancel('function(response) { alert('confirmation cancelled') }')
- *     ->onSuccess('function(response) { alert('success') }')
- *     ->onError('function(err) { alert('error') }')
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables Batch Ajax action button.
+   *
+   * -- Laravel Integration --
+   *
+   * Button::make('ajaxBatch')
+   *     ->text('Restore')
+   *     ->url(route('batch-restore-action-url'))
+   *     ->confirmation('Generic confirmation message.') // Optional if you want confirmation before proceeding.
+   *     ->onCancel('function(response) { alert('confirmation cancelled') }')
+   *     ->onSuccess('function(response) { alert('success') }')
+   *     ->onError('function(err) { alert('error') }')
+   *
+   */
   $.fn.dataTable.ext.buttons.ajaxBatch = {
     name: 'ajaxBatch',
     extend: 'selected',
@@ -595,25 +563,23 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     },
   }
-})
 
-/**
- * DataTables Toggle Scope button.
- *
- * -- Laravel Integration --
- *
- * Note: toggle function currently depends on 'bi-square'. Be sure to include it when overriding the text.
- *
- * Button::make('toggleScope')
- *     ->text('<i class="bi bi-square"></i> Only Deleted')
- *     ->scope('onlyDeleted')
- *
- * This will append the following data on ajax requests:
- *     draw: 1,
- *     ...
- *     scopes[onlyDeleted] = 0 / 1
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables Toggle Scope button.
+   *
+   * -- Laravel Integration --
+   *
+   * Note: toggle function currently depends on 'bi-square'. Be sure to include it when overriding the text.
+   *
+   * Button::make('toggleScope')
+   *     ->text('<i class="bi bi-square"></i> Only Deleted')
+   *     ->scope('onlyDeleted')
+   *
+   * This will append the following data on ajax requests:
+   *     draw: 1,
+   *     ...
+   *     scopes[onlyDeleted] = 0 / 1
+   */
   $.fn.dataTable.ext.buttons.toggleScope = {
     name: 'toggleScope',
     className: 'buttons-toggle',
@@ -631,32 +597,30 @@ document.addEventListener('DOMContentLoaded', function () {
       dt.draw()
     },
   }
-})
 
-/**
- * DataTables withTrashed button.
- *
- * -- Laravel Integration --
- *
- * Note: toggle function currently depends on 'fa-square'. Be sure to include it when overriding the text.
- *
- * Button::make('withTrashed')->text('<i class="bi bi-square"></i> Show Deleted')
- *
- * This will append the following data on ajax requests:
- *     draw: 1,
- *     ...
- *     scopes[withTrashed] = 0 / 1
- *
- * -- Using custom data key --
- * Button::make('withTrashed')->text('<i class="bi bi-square"></i> Show Deleted')->key('filters')
- *
- * This will append the following data on ajax requests:
- *     draw: 1,
- *     ...
- *     filters[withTrashed] = 0 / 1
- *
- */
-document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * DataTables withTrashed button.
+   *
+   * -- Laravel Integration --
+   *
+   * Note: toggle function currently depends on 'fa-square'. Be sure to include it when overriding the text.
+   *
+   * Button::make('withTrashed')->text('<i class="bi bi-square"></i> Show Deleted')
+   *
+   * This will append the following data on ajax requests:
+   *     draw: 1,
+   *     ...
+   *     scopes[withTrashed] = 0 / 1
+   *
+   * -- Using custom data key --
+   * Button::make('withTrashed')->text('<i class="bi bi-square"></i> Show Deleted')->key('filters')
+   *
+   * This will append the following data on ajax requests:
+   *     draw: 1,
+   *     ...
+   *     filters[withTrashed] = 0 / 1
+   *
+   */
   $.fn.dataTable.ext.buttons.withTrashed = {
     name: 'withTrashed',
     className: 'buttons-toggle',
