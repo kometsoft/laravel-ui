@@ -36,10 +36,10 @@ php artisan vendor:publish --tag=ui-assets
 
 2. Add the `@ui` Blade directive to your main layout
 
-> Consider removing your existing Bootstrap imports
+> Consider removing your existing Bootstrap imports. Only import what you need on the page.
 
 ```
-@ui(['tabler-core', 'tabler-icons', 'apexcharts', 'tom-select', 'litepicker', 'chart.js', 'datatables.net'])
+@ui(['tabler-core', 'tabler-icons', 'tom-select', 'litepicker', 'apexcharts', 'alpinejs', 'datatables.net', 'jquery'])
 ```
 
 ## Credits

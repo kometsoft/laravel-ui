@@ -45,8 +45,17 @@ class LaravelUi
             $script('tabler-core/libs/litepicker/litepicker.js');
         }
 
-        if (in_array('chart.js', $features)) {
-            $script('chart.js/chart.min.js');
+        // Will be removed
+        // if (in_array('chart.js', $features)) {
+        //     $script('chart.js/chart.min.js');
+        // }
+
+        if (in_array('jquery', $features)) {
+            $script('jquery/jquery.min.js');
+        }
+
+        if (in_array('alpinejs', $features)) {
+            $script('alpinejs/alpinejs.min.js');
         }
 
         if (in_array('datatables.net', $features)) {

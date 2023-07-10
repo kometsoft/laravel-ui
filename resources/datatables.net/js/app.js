@@ -18,7 +18,7 @@ $.extend(true, DataTable.defaults, {
   pageLength: 10,
   language: {
     paginate: {
-      first: '<i class="ti ti-chevrons-left "></i>',
+      first: '<i class="ti ti-chevrons-left"></i>',
       previous: '<i class="ti ti-chevron-left"></i>',
       next: '<i class="ti ti-chevron-right"></i>',
       last: '<i class="ti ti-chevrons-right"></i>',
