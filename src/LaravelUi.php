@@ -58,6 +58,10 @@ class LaravelUi
             $script('alpinejs/alpinejs.min.js');
         }
 
+        if (in_array('tinymce', $features)) {
+            $script('tinymce/tinymce.min.js');
+        }
+
         if (in_array('datatables.net', $features)) {
             $link('datatables.net/css/datatables.min.css');
             $link('datatables.net/css/app.css');
