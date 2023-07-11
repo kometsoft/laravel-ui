@@ -42,6 +42,22 @@ php artisan vendor:publish --tag=ui-assets
 @ui(['tabler-core', 'tabler-icons', 'tom-select', 'litepicker', 'apexcharts', 'alpinejs', 'datatables.net', 'jquery'])
 ```
 
+## Updating
+
+1. Update the composer package
+
+```bash
+composer update kometsoft/laravel-ui
+```
+
+2. Force publish `ui:assets` tag
+
+```bash
+php artisan vendor:publish --tag=ui-assets --force
+```
+
+3. Hard reload you browser, <kbd>Ctrl</kbd>/<kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>
+
 ## Credits
 
 - [aerrata](https://github.com/kometsoft)
