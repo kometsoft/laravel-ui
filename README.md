@@ -56,7 +56,14 @@ composer update kometsoft/laravel-ui
 php artisan vendor:publish --tag=ui-assets --force
 ```
 
-3. Hard reload you browser, <kbd>Ctrl</kbd>/<kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>
+3. (Optional) If you are using a custom tabler.min.css, make sure you override the file contents.
+
+```bash
+cp resources/css/<custom-tabler-theme> public/vendor/ui/tabler-core/css/tabler.min.css
+```
+
+4. Hard reload your browser, <kbd>Ctrl</kbd>/<kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>
+
 
 ## Credits
 
