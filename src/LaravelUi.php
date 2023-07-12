@@ -23,10 +23,8 @@ class LaravelUi
         if (in_array('tabler-core', $features)) {
             $link('tabler-core/css/tabler.min.css');
             $link('tabler-core/css/tabler-vendors.min.css');
-            $link('tabler-core/css/demo.min.css');
             $script('tabler-core/js/demo-theme.min.js');
             $script('tabler-core/js/tabler.min.js');
-            $script('tabler-core/js/demo.min.js');
         }
 
         if (in_array('tabler-icons', $features)) {
@@ -44,11 +42,6 @@ class LaravelUi
         if (in_array('litepicker', $features)) {
             $script('tabler-core/libs/litepicker/litepicker.js');
         }
-
-        // Will be removed
-        // if (in_array('chart.js', $features)) {
-        //     $script('chart.js/chart.min.js');
-        // }
 
         if (in_array('jquery', $features)) {
             $script('jquery/jquery.min.js');
