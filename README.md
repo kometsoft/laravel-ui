@@ -62,9 +62,6 @@ php artisan vendor:publish --tag=ui-assets --force
 cp resources/css/<custom-tabler-theme> public/vendor/ui/tabler-core/css/tabler.min.css
 ```
 
-4. Hard reload your browser, <kbd>Ctrl</kbd>/<kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>
-
-
 ## Credits
 
 - [aerrata](https://github.com/kometsoft)
