@@ -9,9 +9,9 @@ class LaravelUi
         $imports = '';
 
         $asset_path = function ($path) {
-            $version = time();
+            $version = '688177';
 
-            return asset("vendor/ui/$path?$version");
+            return asset("vendor/ui/$path?v=$version");
         };
 
         $link = function ($path) use ($asset_path, &$imports) {
