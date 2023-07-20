@@ -49,7 +49,7 @@ class LaravelUiServiceProvider extends ServiceProvider
 
             $this->publishes([
                 __DIR__ . '/../resources' => public_path('vendor/ui'),
-                __DIR__ . '/../resources/tabler-core/css/tabler.min.css' => resources_path('css/tabler.min.css'),
+                __DIR__ . '/../resources/tabler-core/css/tabler.min.css' => resource_path('css/tabler.min.css'),
             ], 'ui:assets');
         }
 
