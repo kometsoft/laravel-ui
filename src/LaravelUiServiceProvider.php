@@ -48,7 +48,8 @@ class LaravelUiServiceProvider extends ServiceProvider
             // ], 'ui-resources');
 
             $this->publishes([
-                __DIR__.'/../resources' => public_path('vendor/ui'),
+                __DIR__ . '/../resources' => public_path('vendor/ui'),
+                __DIR__ . '/../resources/tabler-core/css/tabler.min.css' => resources_path('css/tabler.min.css'),
             ], 'ui:assets');
         }
 
@@ -66,7 +67,7 @@ class LaravelUiServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-ui');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'laravel-ui');
 
         // Register the main class to use with the facade
         $this->app->singleton('laravel-ui', function () {
