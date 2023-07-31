@@ -9,17 +9,15 @@ class LaravelUi
         $imports = '';
 
         $asset_path = function ($path) {
-            $version = '688177';
-
-            return asset("vendor/ui/$path?v=$version");
+            return asset("vendor/ui/$path");
         };
 
         $link = function ($path) use ($asset_path, &$imports) {
             $imports .= '<link href="' . $asset_path($path) . '" rel="stylesheet">';
         };
 
-        $script = function ($path) use ($asset_path, &$imports) {
-            $imports .= '<script src="' . $asset_path($path) . '" defer></script>';
+        $script = function ($path, $defer = true) use ($asset_path, &$imports) {
+            $imports .= '<script src="' . $asset_path($path) . '"' . ($defer ? ' defer' : '') . '></script>';
         };
 
         if (in_array('tabler-core', $features)) {
@@ -34,19 +32,19 @@ class LaravelUi
         }
 
         if (in_array('apexcharts', $features)) {
-            $script('tabler-core/libs/apexcharts/apexcharts.min.js');
+            $script('tabler-core/libs/apexcharts/apexcharts.min.js', false);
         }
 
         if (in_array('tom-select', $features)) {
-            $script('tabler-core/libs/tom-select/tom-select.base.min.js');
+            $script('tabler-core/libs/tom-select/tom-select.base.min.js', false);
         }
 
         if (in_array('litepicker', $features)) {
-            $script('tabler-core/libs/litepicker/litepicker.js');
+            $script('tabler-core/libs/litepicker/litepicker.js', false);
         }
 
         if (in_array('jquery', $features)) {
-            $script('jquery/jquery.min.js');
+            $script('jquery/jquery.min.js', false);
         }
 
         if (in_array('alpinejs', $features)) {
@@ -54,11 +52,11 @@ class LaravelUi
         }
 
         if (in_array('tinymce', $features)) {
-            $script('tinymce/tinymce.min.js');
+            $script('tinymce/tinymce.min.js', false);
         }
 
         if (in_array('fullcalendar', $features)) {
-            $script('fullcalendar/fullcalendar.global.min.js');
+            $script('fullcalendar/fullcalendar.global.min.js', false);
         }
 
         if (in_array('datatables.net', $features)) {
